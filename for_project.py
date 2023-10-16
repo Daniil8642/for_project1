@@ -15,7 +15,7 @@ def edit_note(index, text, tags, notes):
         print(f"Нотатки з індексом {index} не існує. Редагування неможливе.")
 
 
-# Видалення нотатки за індексом
+# Видалення нотатки за назвою
 def delete_note(title, notes):
     for note in notes:
         if note['title'] == title:
