@@ -4,7 +4,6 @@ def add_note(text, tags, notes):
     notes.append(new_note)
     print("Нотатка була успішно додана.")
 
-
 # Редагування інформації про нотатку
 def edit_note(index, text, tags, notes):
     if 0 <= index < len(notes):
@@ -14,13 +13,11 @@ def edit_note(index, text, tags, notes):
     else:
         print(f"Нотатки з індексом {index} не існує. Редагування неможливе.")
 
-
 # Видалення нотатки за назвою
 def delete_note(title, notes):
     for note in notes:
-        if note['title'] == title:
+        if note['text'] == title:
             notes.remove(note)
             print(f"Нотатка з назвою '{title}' була успішно видалена.")
             return
     print(f"Нотатки з назвою '{title}' не існує. Видалення неможливе.")
-
