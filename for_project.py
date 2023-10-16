@@ -16,11 +16,11 @@ def edit_note(index, text, tags, notes):
 
 
 # Видалення нотатки за індексом
-def delete_note(index, notes):
-    if 0 <= index < len(notes):
-        deleted_note = notes.pop(index)
-        print(f"Нотатка під індексом {index} була успішно видалена.")
-        return deleted_note
-    else:
-        print(f"Нотатки з індексом {index} не існує. Видалення неможливе.")
-        return None
+def delete_note(title, notes):
+    for note in notes:
+        if note['title'] == title:
+            notes.remove(note)
+            print(f"Нотатка з назвою '{title}' була успішно видалена.")
+            return
+    print(f"Нотатки з назвою '{title}' не існує. Видалення неможливе.")
+
